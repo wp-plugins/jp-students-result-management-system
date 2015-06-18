@@ -16,7 +16,7 @@ Simple But Powerful Students Result Management System.You can add,edit,delete,pu
 
 == Installation ==
 
-There are two way to active this plugin to your Wordpress site.
+There are two way to active this plugin on your Wordpress site.
 
 First way...
 
@@ -34,10 +34,12 @@ Second way...
 	<li>Activate the plugin from wordpress plugin menu.</li>
 </ul>
 
-<strong>You:</strong> have finished your installation.<br>
+You have finished your installation.<br>
 Enjoy...
 
 == Frequently Asked Questions ==
+
+Some answer you may needed...
 
 <ul>
 	<li>How to add new result?</li>
@@ -54,11 +56,11 @@ See screenshots for better understanding...
 
 == Screenshots ==
 
-1. Screenshot-1
-2. Screenshot-2
-3. Screenshot-3
-4. Screenshot-4
-5. Screenshot-5
+1. Screenshot-1.jpg
+2. Screenshot-2.png
+3. Screenshot-3.png
+4. Screenshot-4.png
+5. Screenshot-5.png
 
 == Changelog ==
 1.1 screenshot added
