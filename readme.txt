@@ -43,7 +43,9 @@ Some answer you may needed...
 
 <ul>
 	<li>How to add new result?</li>
-	<li>From your wordpress dashboard go for 'Add New' under 'Students Result' menu.Then fill all fields.</li>
+		<ul>
+			<li>From your wordpress dashboard go for 'Add New' under 'Students Result' menu.Then fill all fields.</li>
+		</ul>
 	<li>How to publish a result?</li>
 	<li>It's very easy.Publish your specific student result like a post.</li>
 	<li>How to insert students result search form in a page or post?</li>
