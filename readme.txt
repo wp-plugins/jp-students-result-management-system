@@ -43,13 +43,11 @@ Some answer you may needed...
 
 <ul>
 	<li>How to add new result?</li>
-		<ul>
-			<li>From your wordpress dashboard go for 'Add New' under 'Students Result' menu.Then fill all fields.</li>
-		</ul>
+	<li>From your wordpress dashboard go for 'Add New' under 'Students Result' menu.Then fill all fields.</li>
 	<li>How to publish a result?</li>
 	<li>It's very easy.Publish your specific student result like a post.</li>
 	<li>How to insert students result search form in a page or post?</li>
-	<li>Go to your desire post or page edit screen and use shortcode <pre>[jp_students_result_sc]</pre> to the editor.</li>
+	<li>Go to your desire post or page edit screen and use shortcode <br /> <pre>[jp_students_result_sc]</pre> to the editor.</li>
 	<li>How to search a student result form frontend?</li>
 	<li>To search a specific student result insert student registration number to the field and hit 'Result' Button.<br />Then wait a moment,ajax powered search form will display your specific student result within a few second.</li>
 </ul>
