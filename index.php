@@ -76,7 +76,7 @@ function jsrms_students_result_reg() {
     'supports'      => array( 'thumbnail','title', ),
 	'taxonomies' => array(  'classes' ),
     'has_archive'   => true,
-	'menu_icon' => JP_SRMS_PATH.'/images/students_result.ico'
+	'menu_icon' => 'dashicons dashicons-portfolio'
   );
   register_post_type( 'jp_students_result', $args ); 
 }
