@@ -56,7 +56,11 @@ See screenshots for better understanding...
 
 == Screenshots ==
 
-1. Result Result Input Area.
+1. Result Input Area.
+2. Result Admin Menu.
+3. Shortcode For Result Search Form.
+4. Result Search Form.
+5. Result Output Using Ajax.
 
 == Changelog ==
 1.1 screenshot added
