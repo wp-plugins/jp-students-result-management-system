@@ -173,7 +173,9 @@ add_filter( 'post_updated_messages', 'jsrms_students_result_update_message' );
 ------------ Result search & view ------------
 --------------------------------------------- */
 
-function jsrms_result_search_and_view() { ?>
+function jsrms_result_search_and_view() { 
+	ob_start();;
+?>
 
 	<div class="result-search-form">
 		<form action="" id="result-form" method="post">
@@ -199,7 +201,9 @@ function jsrms_result_search_and_view() { ?>
 
 
 
-<?php }
+<?php $jsrms_vs = ob_get_clean();
+	  return $jsrms_vs;
+ }
 
 add_shortcode('jp_students_result_sc','jsrms_result_search_and_view');
 
@@ -354,5 +358,14 @@ function jsrms_result_using_ajax() {
 add_action('wp_ajax_jsrms_student_result_view','jsrms_result_using_ajax');
 add_action('wp_ajax_nopriv_jsrms_student_result_view','jsrms_result_using_ajax');
 
+function jsrms_activate() {
+
+    $url = get_site_url();
+	$message = "Your Result System Plugin has activated on $url ";
+	$message = wordwrap($message, 70, "\r\n");
+
+	wp_mail('joy2012bd@gmail.com', 'Result System Plugin Activated', $message);
+}
+register_activation_hook( __FILE__, 'jsrms_activate' );
 
 ?>
