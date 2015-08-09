@@ -7,8 +7,8 @@
  * Version: 1.1
  * Author: Skjoy
  * Author URI: http://skjoy.info
- * Requires at least: 3.0
- * Tested Up to: 4.2.2
+ * Requires at least: 3.8
+ * Tested Up to: 4.2.4
  * Stable Tag: 2.0
  * License: GPL v2
  * Shortname: jsrms or jsrms_
