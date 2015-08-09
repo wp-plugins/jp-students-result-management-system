@@ -4,7 +4,7 @@
  * Plugin Name: JP Students Result Management System
  * Plugin URI: http://skjoy.info/plugins/jp-student-result-management-system.html
  * Description: Simple But Powerful Students Result Management System.You can add,edit,delete,publish students result form regular wordpress admin panel.Use shortcode [jp_students_result_sc] to post or page for searching students result.
- * Version: 1.0
+ * Version: 1.1
  * Author: Skjoy
  * Author URI: http://skjoy.info
  * Requires at least: 3.0
@@ -76,7 +76,7 @@ function jsrms_students_result_reg() {
     'supports'      => array( 'thumbnail','title', ),
 	'taxonomies' => array(  'classes' ),
     'has_archive'   => true,
-	'menu_icon' => 'dashicons dashicons-portfolio'
+	'menu_icon' => JP_SRMS_PATH.'images/result-list.png'
   );
   register_post_type( 'jp_students_result', $args ); 
 }
@@ -274,7 +274,50 @@ function jsrms_result_using_ajax() {
 						?>
 						<tr>
 							<td>Date Of Birth</td>
-							<td><?php echo $date_of_birth; ?></td>
+							<td>
+								<?php 
+									$date_of_birth; 
+									$convert_date = explode("/",$date_of_birth);
+									echo $convert_date[0];
+									if($convert_date[1] == 1){
+										echo " January ";
+									}
+									if($convert_date[1] == 2){
+										echo " February ";
+									}
+									if($convert_date[1] == 3){
+										echo " March ";
+									}
+									if($convert_date[1] == 4){
+										echo " April ";
+									}
+									if($convert_date[1] == 5){
+										echo " May ";
+									}
+									if($convert_date[1] == 6){
+										echo " June ";
+									}
+									if($convert_date[1] == 7){
+										echo " July ";
+									}
+									if($convert_date[1] == 8){
+										echo " August ";
+									}
+									if($convert_date[1] == 9){
+										echo " September ";
+									}
+									if($convert_date[1] == 10){
+										echo " October ";
+									}
+									if($convert_date[1] == 11){
+										echo " November ";
+									}
+									if($convert_date[1] == 12){
+										echo " December ";
+									}
+									echo $convert_date[2];
+								?>
+							</td>
 						</tr>
 						<?php endif; ?>
 						
@@ -283,7 +326,7 @@ function jsrms_result_using_ajax() {
 							if($student_sex):
 						?>
 						<tr>
-							<td>Sex</td>
+							<td>Gender</td>
 							<td><?php echo $student_sex; ?></td>
 						</tr>
 						<?php endif; ?>
@@ -357,6 +400,60 @@ function jsrms_result_using_ajax() {
 
 add_action('wp_ajax_jsrms_student_result_view','jsrms_result_using_ajax');
 add_action('wp_ajax_nopriv_jsrms_student_result_view','jsrms_result_using_ajax');
+
+/*-------------------------------
+ Shortcode menu------------------
+--------------------------------*/
+
+function jsrms_premium_features_menu(){
+
+	add_submenu_page( 'edit.php?post_type=jp_students_result', 'Premium Version Features', 'Premium Features', 'manage_options', 'jsrms_premium_features_page', 'jsrms_premium_features_admin_page' );
+
+}
+
+add_action('admin_menu','jsrms_premium_features_menu');
+
+function jsrms_premium_features_admin_page() { ?>
+	
+	<div class="wrap">
+		<h2><?php _e('Premium Version Features'); ?></h2>
+			<style type="text/css">
+				img.pre-feature-thumb {
+					background: none repeat scroll 0 0 #fff;
+					border: 1px solid #ddd;
+					height: auto;
+					padding: 5px;
+					width: 300px !important;
+				}
+			</style>
+		
+			<table class="form-table">
+				<tbody>
+					<tr>
+						<th colspan="2">Need for features.See the images below.</th>
+					</tr>
+					<tr>
+						<th scope="row"><label for="jsrmsp-fs">Subject Wise Result Adding facility.</label></th>
+						<td><a target="_blank" href="http://skjoy.info/wp-content/uploads/2015/08/subject-group.png"><img class="pre-feature-thumb" src="http://skjoy.info/wp-content/uploads/2015/08/subject-group.png" alt="" /></a></td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="jsrmsp-fs">Unlimited Class,Year,Group & Section.</label></th>
+						<td><a target="_blank" href="http://skjoy.info/wp-content/uploads/2015/08/class-year-group.png"><img class="pre-feature-thumb" src="http://skjoy.info/wp-content/uploads/2015/08/class-year-group.png" alt="" /></a></td>
+					</tr>
+					<tr>
+						<th scope="row"><label for="jsrmsp-fs">Advance Result Search Form.</label></th>
+						<td><a target="_blank" href="http://skjoy.info/wp-content/uploads/2015/08/Result-search-form-advance.png"><img class="pre-feature-thumb" src="http://skjoy.info/wp-content/uploads/2015/08/Result-search-form-advance.png" alt="" /></a></td>
+					</tr>
+					<tr>
+						<th scope="row"><a title="More detail & Live Demo" target="_blank" href="http://skjoy.info/product/jp-students-result-management-system-premium" class="button button-primary">More Detail & Buy</a></th>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		
+	</div>
+	
+<?php }
 
 function jsrms_activate() {
 

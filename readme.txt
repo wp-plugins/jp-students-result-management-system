@@ -1,9 +1,8 @@
 === JP Students Result Management System ===
 Contributors: Skjoy
-Donate link: http://skjoy.info/donate
 Tags: student result, student, result, result management system,  academic, academic result, university, education, ajax, student result management system
-Requires at least: 3.0
-Tested Up to: 4.2.2
+Requires at least: 3.8
+Tested Up to: 4.2.4
 Stable Tag: 2.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,6 +12,22 @@ Simple But Powerful Students Result Management System.
 == Description ==
 
 Simple But Powerful Students Result Management System.You can add,edit,delete,publish students result form regular wordpress admin panel.Use shortcode [jp_students_result_sc] to post or page for searching & Viewing students result.
+
+<p>Need More Feature?Try Premium Version.</p>
+
+<p>Premium Features</p>
+
+<ul>
+	<li>Subject wise result adding facility.</li>
+	<li>Unlimited subject,class,year,group and section.</li>
+	<li>Shortcode system.</li>
+	<li>Advance result search form.</li>
+	<li>Result print facility.</li>
+	<li>Responsive and customizable custom page template.</li>
+	<li>Setting panel and many more.</li>
+</ul>
+
+<a href="http://skjoy.info/product/jp-students-result-management-system-premium">See Live Demo & More Detail</a>
 
 == Installation ==
 
@@ -63,7 +78,7 @@ See screenshots for better understanding...
 5. Result Output Using Ajax.
 
 == Changelog ==
-1.1 screenshot added
+1.1 Changed date format mm/dd/yy to dd/mm/yy.Sloved Custom post menu iocn.
 
 == Upgrade Notice ==
-1.1 screenshot added
+1.1 Changed date format mm/dd/yy to dd/mm/yy.Sloved Custom post menu iocn.
